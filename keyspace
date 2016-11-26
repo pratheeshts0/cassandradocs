@@ -1,0 +1,60 @@
+CREATE KEYSPACE zzzzaaa WITH REPLICATION = {'class' : 'NetworkTopologyStrategy', 'dc1' : 1, 'dc2' : 0};
+
+ CREATE KEYSPACE allaaaaaaaah   WITH REPLICATION = {'class' : 'NetworkTopologyStrategy', 'dc1' : 1 };
+
+
+CREATE KEYSPACE jj
+  WITH REPLICATION = { 'class' : 'SimpleStrategy', 'replication_factor' : 1 };
+ CREATE KEYSPACE vvv
+    WITH REPLICATION = {'class' : 'SimpleStrategy', 'replication_factor': 3 };
+
+
+
+
+
+insert into student (stuid, avg_marks, description) values (1,25.5,'student 1');
+
+
+insert into student (stuid, avg_marks, description) values (2,35.5,'student 2');
+
+
+create table marks(stuid int,exam_date timestamp,marks float,exam_name text , primary key (stuid,exam_date));
+
+
+insert into marks(stuid ,exam_date ,marks ,exam_name) values (1,'2016-11-10',76 ,'examA');
+
+
+insert into marks(stuid ,exam_date ,marks ,exam_name) values (1,'2016-11-11',90 ,'examB');
+
+insert into marks(stuid ,exam_date ,marks ,exam_name) values (1,'2016-11-12',68 ,'examC');
+
+
+
+
+
+
+
+
+
+CREATE TABLE crossfit_gyms_by_location ( 
+    country_code text,
+    state_province text,
+    city text,
+    gym_name text,
+    PRIMARY KEY (country_code, state_province, city, gym_name) 
+) WITH CLUSTERING ORDER BY (state_province DESC, city ASC, gym_name ASC); 
+
+
+
+
+
+INSERT INTO crossfit_gyms_by_location (country_code, state_province, city, gym_name) VALUES ('USA', 'CA', 'San Francisco', 'San Francisco CrossFit');
+INSERT INTO crossfit_gyms_by_location (country_code, state_province, city, gym_name) VALUES ('USA', 'CA', 'San Francisco', 'LaLanne Fitness CrossFit');
+INSERT INTO crossfit_gyms_by_location (country_code, state_province, city, gym_name) VALUES ('USA', 'NY', 'New York', 'CrossFit NYC');
+INSERT INTO crossfit_gyms_by_location (country_code, state_province, city, gym_name) VALUES ('USA', 'NY', 'New York', 'CrossFit Metropolis');
+INSERT INTO crossfit_gyms_by_location (country_code, state_province, city, gym_name) VALUES ('USA', 'NV', 'Las Vegas', 'CrossFit Las Vegas');
+INSERT INTO crossfit_gyms_by_location (country_code, state_province, city, gym_name) VALUES ('USA', 'NV', 'Las Vegas', 'Kaizen CrossFit');
+INSERT INTO crossfit_gyms_by_location (country_code, state_province, city, gym_name) VALUES ('CAN', 'ON', 'Toronto', 'CrossFit Toronto');
+INSERT INTO crossfit_gyms_by_location (country_code, state_province, city, gym_name) VALUES ('CAN', 'ON', 'Toronto', 'CrossFit Leslieville');
+INSERT INTO crossfit_gyms_by_location (country_code, state_province, city, gym_name) VALUES ('CAN', 'BC', 'Vancouver', 'CrossFit Vancouver');
+INSERT INTO crossfit_gyms_by_location (country_code, state_province, city, gym_name) VALUES ('CAN', 'BC', 'Vancouver', 'CrossFit BC');
